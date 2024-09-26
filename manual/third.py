@@ -2,23 +2,18 @@ from PIL import Image
 from collections import Counter
 
 def image_to_hashmap(image_path):
-    # Open the image
+
     img = Image.open(image_path)
-    # Convert the image to RGB mode (if it's not already)
     img = img.convert('RGB')
     
-    # Get image size
     width, height = img.size
     
-    # Create a list to store RGB values of all pixels
     pixel_list = []
     
-    # Iterate through each pixel
+
     for x in range(width):
         for y in range(height):
-            # Get the RGB value of the pixel
             rgb = img.getpixel((x, y))
-            # Add RGB value to the list
             pixel_list.append(rgb)
     
     # Count the occurrence of each color
@@ -30,7 +25,7 @@ def image_to_hashmap(image_path):
     return most_common_color
 
 def create_linear_gradient_image(width, height, start_color, end_color):
-    # Create a new image with RGB mode
+
     img = Image.new("RGB", (width, height))
     
     # Generate gradient
@@ -82,6 +77,6 @@ y_position = int(height * 0.35)  # Position at 35% of the gradient height
 # Overlay the image at the calculated position
 final_image = overlay_image(gradient_image, overlay_image_obj, (x_position, y_position))
 
-# Save or show the final image
-final_image.show()  # To display the image
-final_image.save('final_image.png')  # To save the image
+
+final_image.show()  
+final_image.save('final_image.png')  

@@ -1,7 +1,7 @@
 from PIL import Image
 
 def create_linear_gradient_image(width, height, start_color, end_color):
-    # Create a new image with RGB mode
+
     img = Image.new("RGB", (width, height))
     
     # Generate gradient
@@ -21,7 +21,7 @@ def create_linear_gradient_image(width, height, start_color, end_color):
 
 # Define image size and colors
 width, height = 256, 512
-start_color = (73, 127, 151)  # Max color (white)
+start_color = (73, 127, 151)  # Max color
 end_color = (0, 0, 0)         # Black
 
 # Create the gradient image
