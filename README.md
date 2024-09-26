@@ -12,3 +12,5 @@ in manual you need to go through 3 steps
 3rd add the ablum cover over the lineargradient image
 
 I am trying to make the 90's effect over it
+
+![final_image_with_overlay_at_20_percent](https://github.com/user-attachments/assets/969495d6-6706-4a23-bc50-b29ac0659c44)
