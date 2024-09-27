@@ -47,13 +47,12 @@ def overlay_image(background, overlay, position):
     background.paste(overlay, position, overlay if overlay.mode == 'RGBA' else None)
     return background
 
-# Example usage
-# Step 1: Find the highest occurrence color in the image
+# Find the highest occurrence color in the image
 image_path = 'pp.jpeg'  # Replace with your image path
 highest_occurrence_color = image_to_hashmap(image_path)
 print(f"Highest occurrence color: {highest_occurrence_color}")
 
-# Step 2: Create a gradient image from the highest occurrence color to black
+#Create a gradient image from the highest occurrence color to black
 width, height = 512, 1024  # Set the desired width and height
 start_color = highest_occurrence_color  # Use the most common color as the start color
 end_color = (0, 0, 0)  # Black as the end color
@@ -61,7 +60,7 @@ end_color = (0, 0, 0)  # Black as the end color
 # Create the gradient image
 gradient_image = create_linear_gradient_image(width, height, start_color, end_color)
 
-# Step 3: Overlay the original image at 20% of the gradient height
+# Overlay the original image at 20% of the gradient height
 overlay_image_obj = Image.open(image_path)
 
 # Resize overlay image if it's too large

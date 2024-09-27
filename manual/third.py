@@ -63,7 +63,7 @@ end_color = (0, 0, 0)  # Black as the end color
 # Create the gradient image
 gradient_image = create_linear_gradient_image(width, height, start_color, end_color)
 
-# Step 3: Overlay the original image at 35% height of the gradient
+#Overlay the original image at 35% height of the gradient
 overlay_image_obj = Image.open(image_path)
 
 # Resize overlay image if it's too large
